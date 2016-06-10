@@ -7,4 +7,7 @@
 .toolbarL{
     text-decoration: none;
     line-height: 30px;
+    color: azure;
+    font-size: 16px;
+    margin-left: 10px;
 }
