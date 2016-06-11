@@ -48,3 +48,10 @@ nav{
     background-color: rgba(0,0,0,.7);
     width: 100%;
 }
+
+#timetxt{
+    margin-right: -130px;
+    float: right;
+    line-height: 54px;
+    color: azure;
+}
