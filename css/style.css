@@ -47,11 +47,76 @@ nav{
     height: 54px;
     background-color: rgba(0,0,0,.7);
     width: 100%;
+    margin-top: -16px;
 }
 
 #timetxt{
     margin-right: -130px;
     float: right;
     line-height: 54px;
-    color: azure;
+    color: #B4A9A9;
+    font-family: 'Dosis';
+    font-weight: 600;
+}
+
+nav ul li{
+    float:left;
+    height: 54px;
+    line-height: 54px;
+    position: relative;
+    /*margin-right: 30px;*/
+    list-style: none;
+}
+
+nav ul li a{
+    float: left;
+    font-size: 20px;
+    color: #B4A9A9;
+    font-weight: 600;
+    font-family: 'Dosis';
+    padding:0 20px;
+    text-decoration: none;
+    position: relative;
+    /*list-style-type:none;*/
+
+}
+
+nav ul li span{
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: #08d7a2;
+    transition: all .4s;
+}
+
+
+nav .inner {
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav .logo{
+    float: left;
+    margin-left: 100px;
+    margin-top: -17px;
+    margin-right: 400px;
+}
+nav .logo  a{
+    text-decoration: none;
+}
+
+nav .logo  h1{
+    font-size: 200%;
+    /*transform-style: preserve-3d;*/
+    /*animation: run  ease-in-out 9s infinite;*/
+    /*text-align: center;*/
+    color: #fff;
+}
+
+nav ul li:hover span {
+    width: 100%;
+}
+
+nav ul li:hover a {
+    color: #fff;
 }
