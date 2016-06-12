@@ -6,6 +6,13 @@
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
 </head>
 <body>
+<script>
+    window.onload=function(){
+        document.getElementById("dropdownMenu1").addEventListener("click",function(){
+                span.innerHTML=Action;
+        })
+    }
+</script>
 <div class="container">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -35,18 +42,28 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-    <ul class="nav nav-tabs">
-        aaaaa
-        <li role="presentation" class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                Dropdown <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-               bbbb
-            </ul>
-        </li>
-        ccc
-    </ul>
+
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Dropdown
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </ul>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+
 
     <!--<div class="row">-->
         <!--<div class="col-sm-6 col-md-4">-->
