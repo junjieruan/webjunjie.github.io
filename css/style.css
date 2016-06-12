@@ -7,6 +7,10 @@
 .toolbarL{
     float:left;
 }
+
+.toolbarL a{
+    text-decoration: none;
+}
 .a_logo{
     color: #08d7a2;
     padding: 0 12px 0 27px;
