@@ -27,3 +27,16 @@ function checkTime(i){
     }
     return i;
 }
+
+
+function loginin(){
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    if(username =="admin" && password =="admin"){
+        history.go(-1);
+    }else{
+        alert("输入错误");
+        history.go(0);
+    }
+
+}
