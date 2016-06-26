@@ -7,7 +7,7 @@
     position: relative;
 }
 
-#box{
+.box{
     float: left;
     padding: 5px;
 }
@@ -20,6 +20,6 @@
 }
 
 .box_img img{
-    width: 200px;
+    width: 150px;
     height: auto;
 }
