@@ -40,3 +40,20 @@ function loginin(){
     }
 
 }
+
+
+$(document).ready(function(){
+    $(".MyTab #tabfirst li").each(function(index){
+        var liNode=$(this);
+            $(this).mouseover(function(){
+                timeoutid=setTimeout(function(){
+                $("div.content").removeClass("content");
+                $("li.tabin").removeClass("tabin");
+                liNode.addClass("tabin");
+                $(".MyTab>div").eq(index).addClass("content")
+        },300)
+        }).mouseout(function(){
+                clearTimeout(timeoutid);
+        })
+    })
+})
