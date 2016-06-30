@@ -60,7 +60,7 @@ nav{
     color: #B4A9A9;
     font-family: 'Dosis';
     font-weight: 600;
-    position:fixed;
+    position:absolute;
 }
 
 nav ul li{
@@ -173,3 +173,78 @@ nav ul li:hover a {
     background-color: #262626;
     border:5px solid #262626;
 }
+
+.MyTabcolor1{
+    width: 100%;
+    height: 250px;
+    background-color: #333;
+}
+
+.MyTabcolor2{
+    width: 100%;
+    height: 300px;
+    background-color: #333;
+    position: relative;
+}
+
+.banner *{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.banner{
+    width: 300px;
+    height: 200px;
+    border: 5px solid black;
+    position: absolute;
+    margin: 50px 450px;
+    overflow: hidden;
+}
+.banner .img{
+    width: 1500px;
+    position: absolute;
+    left: 0px;
+    top: 0;
+}
+.banner .img li img{
+    height:200px;
+    width:300px;
+    float: left;
+
+}
+
+
+.banner .num{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 0px;
+    bottom:10px;
+}
+
+.banner .num li{
+    width: 10px;
+    height:10px;
+    background-color: #888;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 3px;
+}
+.banner .num li.on{background: #F60;}
+
+.banner .btn{
+    width: 30px;
+    height: 50px;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top:50%;
+    margin-top: -25px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    font-family: "宋体";
+}
+.banner .btn_l{left: 0;}
+.banner .btn_r{right: 0;}

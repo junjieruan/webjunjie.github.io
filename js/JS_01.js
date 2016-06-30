@@ -57,3 +57,25 @@ $(document).ready(function(){
         })
     })
 })
+
+$(document).ready(function(){
+    var i=0;
+    var size=$(".banner .img li").length;
+    $(".banner .num li").first().addClass("on");
+    $(".btn_l").click(function(){
+        i++;
+        if(i==size){
+            i=0;
+        }
+        $(".banner .img").first().animate({left:-i*300},500);
+        $(".banner .num li").eq(i).addClass("on").siblings().removeClass("on");
+    })
+    $(".btn_r").click(function(){
+        i--;
+        if(i==-1){
+            i=size-1;
+        }
+        $(".banner .img").first().animate({left:-i*300},500);
+        $(".banner .num li").eq(i).addClass("on").siblings().removeClass("on");
+    })
+})
