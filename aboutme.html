@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <title></title>
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/aboutme.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        .navbar{
+            position: relative;
+        }
+        .btn-group{
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .jumbotron{
+            width: 870px;
+            margin-top: -390px;
+            margin-left: 270px;
+            position: absolute;
+        }
+        .dropdown-menu{
+            margin-left: 95px;
+            margin-top: -35px;
+        }
+        .pagination1{
+            position: fixed;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
 <script>
@@ -44,19 +67,79 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-
-    <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Dropdown
-            <span class="caret"></span>
+    <div class="btn-group-vertical" role="group">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                个人动态 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                日志<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            相册 <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Separated link</a></li>
         </ul>
+    </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                私密 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                访客<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                踩踩我 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
     </div>
     <br/>
     <br/>
@@ -89,7 +172,7 @@
 
 
 
-    <nav>
+    <nav class="pagination1">
         <ul class="pagination">
             <li>
                 <a href="#" aria-label="Previous">
