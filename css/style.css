@@ -210,9 +210,7 @@ nav ul li:hover a {
     height:200px;
     width:300px;
     float: left;
-
 }
-
 
 .banner .num{
     position: absolute;
@@ -248,3 +246,4 @@ nav ul li:hover a {
 }
 .banner .btn_l{left: 0;}
 .banner .btn_r{right: 0;}
+

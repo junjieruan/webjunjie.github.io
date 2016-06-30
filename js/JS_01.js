@@ -60,12 +60,15 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     var i=0;
+    var clone=$(".banner .img li").first().clone();
+    $(".banner .img").append(clone);
     var size=$(".banner .img li").length;
     $(".banner .num li").first().addClass("on");
     $(".btn_l").click(function(){
         i++;
         if(i==size){
-            i=0;
+            $(".banner .img").css({left:0});
+            i=1;
         }
         $(".banner .img").first().animate({left:-i*300},500);
         $(".banner .num li").eq(i).addClass("on").siblings().removeClass("on");
@@ -73,7 +76,8 @@ $(document).ready(function(){
     $(".btn_r").click(function(){
         i--;
         if(i==-1){
-            i=size-1;
+            $(".banner .img").css({left:-(size-1)*300});
+            i=size-2;
         }
         $(".banner .img").first().animate({left:-i*300},500);
         $(".banner .num li").eq(i).addClass("on").siblings().removeClass("on");
