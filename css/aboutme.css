@@ -67,6 +67,7 @@ body{
 .excerpt .meta span{
     margin: 5px 5px 0 0;
     padding-left: 10px;
+    padding-right: 5px;
     text-align: center;
     font-size: 13px;
 }
