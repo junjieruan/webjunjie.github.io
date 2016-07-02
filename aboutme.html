@@ -3,196 +3,260 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <!--<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">-->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/aboutme.css">
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <style>
-        .navbar{
-            position: relative;
-        }
-        .btn-group{
-            margin-bottom: 15px;
-            position: relative;
-        }
-        .jumbotron{
-            width: 870px;
-            margin-top: -390px;
-            margin-left: 270px;
-            position: absolute;
-        }
-        .dropdown-menu{
-            margin-left: 95px;
-            margin-top: -35px;
-        }
-        .pagination1{
-            position: fixed;
-            margin-bottom: 10px;
-        }
-    </style>
 </head>
 <body>
-<script>
-    window.onload=function(){
-        document.getElementById("dropdownMenu1").addEventListener("click",function(){
-                span.innerHTML=Action;
-        })
-    }
-</script>
-<div class="container">
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">阮浚杰的主页</a>
-            </div>
+<nav class="navbar navbar-inverse navbar-fixed-top">               <!--头部  navbar-inverse白字黑框 navbar-fixed-top固定在顶部-->
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <form class="navbar-form navbar-right" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="搜索文章">
+             <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="jpg/blogbrand.png" style="height: 40px;margin-top: -9px">
+             </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active "><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> 主页</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> 关于本站</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> 留言墙</a></li>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group ">
+                    <input type="text" class="form-control" placeholder="请输入要搜索的关键字">
+                </div>
+                <button type="submit" class="btn">搜索</button>
+            </form>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+        </div>
+</nav>
+
+<div class="rjj-body" style="background-color: #f9f9f9">                 <!--body底色-->
+    <div class="container">
+        <div class="row">                                         <!--栅格系统-->
+            <div class="col-md-8">            <!--内容主体：1.每日提示 2.文章列表 3.分页条-->
+                <div class="alert alert-default alert-dismissible" role="alert" style="background-color: #fff">   <!--警告框底色-->
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">x</button>
+                    If you don't bird me,I won't bird you,too.
+                    <div class="ticon pull-right">  <!--pull-right 下拉菜单中的对齐 -->
+                        <img src="http://mjs.sinaimg.cn/wap/online/public/images/weather/day/yin.gif?v=2016070210"
+                                height="20" width="20" >
+                        广州  22 ~ 33℃
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="查看资料">
-                    </div>
-                    <button type="submit" class="btn btn-default">提交</button>
-                </form>
-
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-    <div class="btn-group-vertical" role="group">
-        <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                个人动态 <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-            </ul>
+                </div>
+                <div class="article-list">                                   <!--文章列表-->
+                    <article class="excerpt excerpt-first">                 <!--article H5新标签  blog中文本-->
+                       <header>
+                           <a class="cat" href="#">
+                               ASP.NET MVC
+                               <i></i>
+                           </a>
+                           <h2>
+                               <a class="" href="#" title="开篇">开篇</a>
+                           </h2>
+                       </header>
+                        <p class="meta">
+                            <span class="glyphicon glyphicon-time iconcolor"></span>2016/6/28   <!--引用小图标 span中不能有文本-->
+                            <span class="glyphicon glyphicon-eye-open iconcolor"></span>浏览(<a href="#">279</a>)
+                            <span class="glyphicon glyphicon-comment iconcolor"></span>评论(<a href="#">10</a>)
+                            <span class="glyphicon glyphicon-heart-empty heartcolor">
+                            </span>(<a href="#">91</a>)                            <!--iconcolor改变图标颜色-->
+                        </p>
+                        <p class="text">
+                            开篇。本博客站基于ASP.NET MVC + EF6.0，采用Bootstrap响应式布局搭建，因此使用IE8以下的浏览器访
+                            问时可能会出现错位等一系列问题。本站定位为个人技术博客，主要用来记录工作中遇到的一些问题及其解
+                            决方案，以便日后查看，如果能无意间帮助遇到同类问题的人，那是再好不过了。mark本站虽小，但五脏俱
+                            全：MVC架构、Spring依赖注入、云存储、响应式布局(几乎适应各种屏幕尺寸的设备)、令人抓狂的一堆css、
+                            NUnit单元测试、Log4Net日志记录、Lucene站内检索、各式各样的jquery插件、自己下大功夫造了评论插件、
+                            点赞插件、分页插件，自定义Ueditor编辑器，就算是logo和icon、favicon图标也是相当地精美。 做博
+                            客的过程中发现，竟然同时用到了BAT三大厂的东西。首先，服务器用的是.......
+                        </p>
+                        <p class="label">
+                            <span class="label label-default">#ASP.NET</span>   <!--引用标签-->
+                            <span class="label label-default">#MVC</span>
+                            <span class="label label-default">#Bootstrap</span>
+                            <span class="label label-default">#响应式</span>
+                            <span class="label label-default">#博客</span>
+                            <a href="#" class=" pull-right">继续阅读 »</a>
+                        </p>
+                    </article>
+                    <article class="excerpt excerpt-first">                 <!--article H5新标签  blog中文本-->
+                        <header>
+                            <a class="cat" href="#">
+                                前端
+                                <i></i>
+                            </a>
+                            <h2>
+                                <a class="" href="#" title="如何使用Bootstrap typeahead插件实现搜索框自动补全">
+                                    如何使用Bootstrap typeahead插件实现搜索框自动补全</a>
+                            </h2>
+                        </header>
+                        <p class="meta">
+                            <span class="glyphicon glyphicon-time iconcolor"></span>2016/6/27   <!--引用小图标 span中不能有文本-->
+                            <span class="glyphicon glyphicon-eye-open iconcolor"></span>浏览(<a href="#">121</a>)
+                            <span class="glyphicon glyphicon-comment iconcolor"></span>评论(<a href="#">1</a>)
+                            <span class="glyphicon glyphicon-heart-empty heartcolor" style="color: palevioletred"></span>(<a href="#">41</a>)
+                        </p>
+                        <p class="text">
+                            这就是贴代码的坏处之一：搜索框快被网友玩儿坏了！！！有故意输入空格的，有输入or 1=1的，
+                            有alert的，有html乱入的.......而且好像还在玩儿，随他们去吧，只要开心就好。 在项目中，
+                            经常会用到输入框的自动补全功能，就像百度、淘宝等搜索框一样：当用户输入首字母、关键词时
+                            ，后台会迅速将与此相关的条目返回并显示到前台，以便用户选择，提升用户体验。当然本项目的
+                            补全功能和这些大厂的技术是没有可比性的，但用于站内搜索也是绰绰有余了。接触到的自动补全插
+                            件主要有两个：autocomplete和typeahead。本站使用的是typeahead. jQueryUI-Autocomplete 自动
+                            补全插件-bootstrap-3-typeahead相关参数说明：source：function(query,process){}。query表示
+                            当前文本输入框中的字.......
+                        </p>
+                        <p class="label">
+                            <span class="label label-default">#搜索框</span>   <!--引用标签-->
+                            <span class="label label-default">#自动补全</span>
+                            <span class="label label-default">#autocomplete</span>
+                            <span class="label label-default">#typeahead</span>
+                            <a href="#" class=" pull-right">继续阅读 »</a>
+                        </p>
+                    </article>
+                    <article class="excerpt excerpt-first">                 <!--article H5新标签  blog中文本-->
+                        <header>
+                            <a class="cat" href="#">
+                                开源工具
+                                <i></i>
+                            </a>
+                            <h2>
+                                <a class="" href="#" title="使用Lucene对分词结果进行倒排索引 ">
+                                    使用Lucene对分词结果进行倒排索引 </a>
+                            </h2>
+                        </header>
+                        <p class="meta">
+                            <span class="glyphicon glyphicon-time iconcolor"></span>2016/6/27   <!--引用小图标 span中不能有文本-->
+                            <span class="glyphicon glyphicon-eye-open iconcolor"></span>浏览(<a href="#">67</a>)
+                            <span class="glyphicon glyphicon-comment iconcolor"></span>评论(<a href="#">0</a>)
+                            <span class="glyphicon glyphicon-heart-empty heartcolor" style="color: palevioletred"></span>(<a href="#">10</a>)
+                        </p>
+                        <p class="text">
+                            上一篇博文记录了搜索框自动补全的一些方法，本篇文章粗略说一下后台拿到搜索关键词后如何快速精准
+                            地为用户查询结果。 这里用到了一个十分流行的搜索框架：Lucene+盘古分词（实测盘古分词效果并不太
+                            好，或许是语料少；比较好的应该是中科大的那个分词系统）；其关键技术就是中文分词+倒排索引。 1.
+                            0 鹿神Lucene是当前以及最近几年最受欢迎的免费Java信息检索程序库。它是apache软件基金会4 jakar
+                            ta项目组的一个子项目，是一个开放源代码的全文检索引擎工具包，但它不是一个完整的全文检索引擎，
+                            而是一个全文检索引擎的架构，提供了完整的查询引擎和索引引擎，部分文本分析引擎。 而ApacheLucen
+                            e.net则是C#平台下的搜索引擎框架库，与Java平台下的Lucene用法完全一致.......
+                        </p>
+                        <p class="label">
+                            <a href="#" class=" pull-right">继续阅读 »</a>
+                        </p>
+                    </article>
+                    <article class="excerpt excerpt-first">                 <!--article H5新标签  blog中文本-->
+                        <header>
+                            <a class="cat" href="#">
+                                软件工程
+                                <i></i>
+                            </a>
+                            <h2>
+                                <a class="" href="#" title="总结软件架构特征">
+                                    总结软件架构特征</a>
+                            </h2>
+                        </header>
+                        <p class="meta">
+                            <span class="glyphicon glyphicon-time iconcolor"></span>2016/6/27   <!--引用小图标 span中不能有文本-->
+                            <span class="glyphicon glyphicon-eye-open iconcolor"></span>浏览(<a href="#">11</a>)
+                            <span class="glyphicon glyphicon-comment iconcolor"></span>评论(<a href="#">0</a>)
+                            <span class="glyphicon glyphicon-heart-empty heartcolor" style="color: palevioletred"></span>(<a href="#">2</a>)
+                        </p>
+                        <p class="text">
+                            软件基本模型=实体(语言) + 连接和交互1.概念：软件架构设计的一个核心问题是能否使用重复的架构模
+                            式，即能否达到架构级的软件重用。也就是说，能否在不同的软件系绕中使用同一架构。软件架构风格是
+                            描述某一特定应用领域中系统组织方式的惯用模式(idiomatic paradigm).架构风格定义了一个系统家族
+                            ，即一个架构定义一个词汇表和一组约束。词汇表中包含一些构件和连接件类型，而这组约束指出系统是
+                            如何将这些构件和连接 件组合起来的。架构风格反映了领域中众多系统所共有的结构和语义特性，并指导
+                            如何将各个模块和子系统有效地组织成一个完整的系统。按这种方式理解，软件架 构风格定义了用于描述
+                            系统的术语表和一组指导构件系统的规则。 通用架构风格的分类如.......
+                        </p>
+                        <p class="label">
+                            <span class="label label-default">#软件架构</span>     <!--引用标签-->
+                            <span class="label label-default">#架构风格</span>
+                            <a href="#" class=" pull-right">继续阅读 »</a>
+                        </p>
+                    </article>
+                    <article class="excerpt excerpt-first">                 <!--article H5新标签  blog中文本-->
+                        <header>
+                            <a class="cat" href="#">
+                                前端
+                                <i></i>
+                            </a>
+                            <h2>
+                                <a class="" href="#" title="怎么让百度蜘蛛快速收录自己的网站">
+                                    怎么让百度蜘蛛快速收录自己的网站</a>
+                            </h2>
+                        </header>
+                        <p class="meta">
+                            <span class="glyphicon glyphicon-time iconcolor"></span>2016/6/24   <!--引用小图标 span中不能有文本-->
+                            <span class="glyphicon glyphicon-eye-open iconcolor"></span>浏览(<a href="#">39</a>)
+                            <span class="glyphicon glyphicon-comment iconcolor"></span>评论(<a href="#">0</a>)
+                            <span class="glyphicon glyphicon-heart-empty heartcolor" style="color: palevioletred"></span>(<a href="#">1</a>)
+                        </p>
+                        <p class="text">
+                            新建的博客，论坛等网站如何可以让百度快速收录呢？网站收录对于那些新入门的站长来说就有些困难了
+                            。没有有经验的网站前辈来带，没有足够强劲的链接，想让各大搜索引擎立刻收录你的小站谈何容易呀！
+                            呵呵，万事开头难，世事似乎并非如此，但是想让百度收录你的新站却是相当容易的。没事的时候随便做
+                            做以下几件小事就ok了：一、网站域名。网站的域名一定要和网站主题相符，这样可以利用百度对你站的
+                            信誉评价。二、百度网站登录。提交百度网站登陆是让百度收录网站的的第一步骤。百度登陆的网址是h
+                            ttp://www.baidu.com/search/url_submit.html 但自百度调整算法以后，仅靠百度登陆就想让自己的网
+                            站被百度收录相对困难一点了。三、软文营销。这个是网站主要推广的方法。被各.......
+                        </p>
+                        <p class="label">
+                            <span class="label label-default">#百度爬虫</span>     <!--引用标签-->
+                            <span class="label label-default">#收录</span>
+                            <a href="#" class=" pull-right">继续阅读 »</a>
+                        </p>
+                    </article>
+                    <article class="excerpt excerpt-first">                 <!--article H5新标签  blog中文本-->
+                        <header>
+                            <a class="cat" href="#">
+                               ASP.NET MVC
+                                <i></i>
+                            </a>
+                            <h2>
+                                <a class="" href="#" title="在IIS8上部署网站时如何设置使用域名和IP均可访问：">
+                                    在IIS8上部署网站时如何设置使用域名和IP均可访问：</a>
+                            </h2>
+                        </header>
+                        <p class="meta">
+                            <span class="glyphicon glyphicon-time iconcolor"></span>2016/6/23   <!--引用小图标 span中不能有文本-->
+                            <span class="glyphicon glyphicon-eye-open iconcolor"></span>浏览(<a href="#">32</a>)
+                            <span class="glyphicon glyphicon-comment iconcolor"></span>评论(<a href="#">0</a>)
+                            <span class="glyphicon glyphicon-heart-empty heartcolor" style="color: palevioletred"></span>(<a href="#">3</a>)
+                        </p>
+                        <p class="text">
+                            只需保证主机头、IP、端口有一项不同即可：....
+                        </p>
+                        <p class="label">
+                            <span class="label label-default">#IIS8</span>     <!--引用标签-->
+                            <a href="#" class=" pull-right">继续阅读 »</a>
+                        </p>
+                    </article>
+                </div>
+             </div>
+        <div class="col-md-4">.col-md-4</div>
         </div>
-        <div class="btn-group">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                日志<span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-            </ul>
-        </div>
-    <div class="btn-group">
-        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            相册 <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-        </ul>
     </div>
-        <div class="btn-group">
-            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                私密 <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-            </ul>
-        </div>
-        <div class="btn-group">
-            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                访客<span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-            </ul>
-        </div>
-        <div class="btn-group">
-            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                踩踩我 <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-            </ul>
-        </div>
-    </div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
-
-
-    <!--<div class="row">-->
-        <!--<div class="col-sm-6 col-md-4">-->
-            <!--<div class="thumbnail">-->
-                <!--<img src="..." alt="...">-->
-                <!--<div class="caption">-->
-                    <!--<h3>Thumbnail label</h3>-->
-                    <!--<p>...</p>-->
-                    <!--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-
-
-    <div class="jumbotron">
-        <h1>Hello, world!</h1>
-        <p>...</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-    </div>
-
-
-
-    <nav class="pagination1">
-        <ul class="pagination">
-            <li>
-                <a href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li>
-                <a href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-
 </div>
+
 
 </body>
 </html>
