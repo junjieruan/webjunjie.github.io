@@ -6,6 +6,10 @@
     color:#fff;
 }
 
+.navbar-inverse .navbar-nav>li>a:hover{
+    background-color: #1abc9c;
+}
+
 .navbar-inverse .navbar-form .btn{
     background-color: #1abc9c;
     color: #fff;
