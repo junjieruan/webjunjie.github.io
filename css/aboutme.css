@@ -27,6 +27,7 @@ body{
 .row .alert-dismissible{
     border: 1px solid #eaeaea;
     border-radius: 8px 8px;
+    background-color: #cccccc;
 }
 
 .excerpt{
@@ -108,4 +109,82 @@ body{
 
 .row .article-list article{
     margin-top: 10px;
+}
+
+.row .article-list article:hover{
+    background-color: #dddddd;
+}
+
+.page {
+    text-align: center;
+}
+.page .pagination li a{
+    background-color:#d5d5d5;
+    color: #8c8c8c;
+    margin-right: 5px;
+}
+.page .pagination .active a{
+    background-color:#31b0d5;
+    color: #fff;
+}
+
+.page .pagination li a:hover{
+    background-color: #a6e1ec;
+}
+
+.page .pagination .totalpage{
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.panel-default .glyphicon{
+    color:#1abc9c;
+}
+
+.panel-heading{
+    background-color:#dddddd;
+}
+
+.media-object{
+    height:150px;
+    width: 150px;
+    float: left;
+}
+
+.media-body{
+    text-indent: 2em;
+    font-size: 15px;
+}
+
+.panel-footer{
+    background-color: #fff;
+    height: 80px;
+}
+.panel-footer li{
+    list-style: none;
+    float: left;
+    margin-left: 10px;
+}
+
+.panel-body .label{
+    display: inline-block;
+}
+
+.panel-body span{
+    margin: 10px;
+    height: 30px;
+    line-height: 30px;
+    width: 40%;
+    font-size: 14px;
+    font-family: "宋体";
+    font-weight: 50px;
+}
+
+.panel .pull-right{
+    color: #6e6e6e;
+}
+
+.panel .pull-right:hover{
+    color: orange;
 }
