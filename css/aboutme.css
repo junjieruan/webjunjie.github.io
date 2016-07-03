@@ -272,3 +272,11 @@ body{
     text-indent: 2em;
     font-size: 17px
 }
+
+
+.article1{
+    background-color: #ffffff;
+    border: 5px;
+    padding: 15px;
+    margin: 20px;
+}
