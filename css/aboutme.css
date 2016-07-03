@@ -236,8 +236,8 @@ body{
     height: 60px;
     position: fixed;
     bottom: 30px;
-    left: 50%;
-    margin-left: 600px;
+
+    right: 50px;
     opacity: .4;
 }
 
