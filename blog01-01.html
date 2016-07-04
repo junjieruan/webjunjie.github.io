@@ -92,8 +92,26 @@
                             <img src="jpg/blog01-10.png" style="width: 300px;">
                             <p>执行，观察异步访问结果</p>
                             <img src="jpg/blog01-11.png" style="width: 300px;"><br/><br/>
+                            <h3>3.data参数和上页例子相同</h3><br/>
+                            <h3>4.回调函数</h3><br/>
+                            <p><span class="label label-info">$.get()方法</span>的回调函数只有两个参数</p>
+                            <img src="jpg/blog01-12.png" style="width: 300px;"><br/><br/>
+                            <small><strong>*回调函数只有当数据成功返回（success）后才被调用，与
+                                <span class="label label-info">load()方法</span>不同</strong></small><br/><br/>
+                            <h3>5.数据格式(type)</h3><br/>
+                            <p>服务器返回的数据可以有多种，包括HTML片段、XML文档、JSON文件等</p><br/>
+                            <h4>1.HTML片段</h4><br/>
+                            <img src="jpg/blog01-13.png" style="width: 300px;"><br/><br/>
+                            <p>HTML片段可不经过处理直接插入主页面</p><br/>
+                            <h4>2.JSON文件</h4><br/>
+                            <img src="jpg/blog01-14.png" style="width: 300px;"><br/><br/>
+                            <p>服务器端返回数据格式是JSON文件，需处理再添加到主页面。上面代码中第4个参数(type)设置为"json"来代表希望服务端返回的数据格式</p><br/>
+
+
+
                             <h2>2.$.post()方法</h2><br/>
                             <p>将服务器<span class="label label-default">Server.php</span>和<span class="label label-default">ajaxindex.html</span>中的get改为post即可</p>
+
                         </div>
                     </article>
 
@@ -108,11 +126,11 @@
                         </li>
                         <li><a href="blog01.html">1</a></li>
                         <li class="active"><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
+                        <li><a href="blog01-02.html">3</a></li>
                         <li><a href="#">4</a></li>
                         <li><a href="#">5</a></li>
                         <li>
-                            <a href="#" aria-label="Next">
+                            <a href="blog01-02.html" aria-label="Next">
                                 <span aria-hidden="true">下一页</span>
                             </a>
                         </li>

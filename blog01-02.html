@@ -57,37 +57,23 @@
                 <div class="article-list">                                   <!--文章列表-->
                     <article class="excerpt excerpt-first">                 <!--article H5新标签  blog中文本-->
                         <div class="page-header" style="text-align: center">
-                            <h1>jQuery中的Ajax<small>Page1</small></h1><br/>
+                            <h1>jQuery中的Ajax<small>Page3</small></h1><br/>
                             <p>关键词：Ajax &nbsp; jQuery &nbsp; php </p>
                         </div>
                         <div class="section1" style="font-size: 16px">
-                              <h2>load()方法</h2><br/>
-                              <h3>1.载入HTML文档</h3><br/>
-                              <p class="label label-success">结构：load（url，[.data]，[.callback]）</p>
-                              <p>首先构造一个被<span class="label label-info">load()方法</span>加载并追加到页面中的HTML，名字为<span class="label label-default">ajax.html</span></p>
-                             <img src="jpg/blog0101.png" style="width: 300px;">
-                             <p>然后新建一个空白页<span class="label label-default">index.html</span>。button按钮用来触发Ajax事件，id为"resText"的元素用来显示追加的HTML内容</p>
-                            <img src="jpg/blog0102.png" style="width: 300px;">
-                            <p>然后编写jQuery代码，单击id为"send"的按钮调用<span class="label label-info">load()方法</span>，然后把<span class="label label-default">ajax.html</span>的内容加载到id为"resText"的元素里</p>
-                            <img src="jpg/blog0103.png">
-                            <p>当按钮被点击后，出现如下界面：</p>
-                            <img src="jpg/blog0104.png"><br/>
-                            <h3>2.筛选载入的HTML文档</h3><br/>
-                            <p>若只需要某些特定元素加载，可使用<span class="label label-info">load()方法</span>的URL参数达到筛选目的</p>
-                            <p>如只加载<span class="label label-default">ajax.html</span>中class为"para"的内容，可使用如下代码：</p>
-                            <img src="jpg/blog0105.png">
-                            <p>效果如图</p>
-                            <img src="jpg/blog0106.png">
-                            <br/>
-                            <h3>3.传递方式</h3><br/>
-                            <p>由参数data决定，若有参数则采用GET方式，否则转化为POST方式</p>
-                            <h3>4.回调参数</h3><br/>
-                            <p>load()提供了回调函数，该函数有三个参数，分别代表请求返回的内容、请求状态和XMLHttpRequest对象</p>
-                            <img src="jpg/blog0107.png" style="width: 300px;">
-                            <p><small><strong>*无论Ajax请求是否成功，只要当请求完成(complete)，回调函数(callback)就被触发</strong></small></p>
-                            <br/>
-                            <p>把上例中加载的目的页改成不存在的<span class="label label-default">ajax1.html</span>，则请求状态为error，并显示</p>
-                            <img src="jpg/blog0108.png" style="width: 300px;">
+                            <h2>$.getScript()和$.getJSON()方法</h2><br/><br/>
+
+                            <h2>1.$.getScript()方法</h2><br/>
+                            <p>在页面初次加载时就获取所有js文件完全没有必要，<span class="label label-info">$.getScript()方法</span>
+                                用来需要时直接加载.js文件。 <span class="label label-default">index.html</span>如下</p>
+                            <img src="jpg/blog0201.png" style="width: 300px;"><br/><br/>
+                            <p><span class="label label-default">ajax.js</span>如下，被动态加载入 <span class="label label-default">index.html</span></p>
+                            <img src="jpg/blog0202.png" style="width: 300px;"><br/><br/>
+                            <p>效果和script标签定义一样，只是需要就加载比较方便</p>
+                            <img src="jpg/blog0203.png" style="width: 300px;"><br/><br/>
+                            <h2>2.$.getJSON()方法</h2><br/>
+                            <p><span class="label label-info">$.getJSON()方法</span>用于加载JSON文件，与<span class="label label-info">$.getScript()方法</span>用法一样</p>
+                           <p>只是把 $.getScript("ajax.js");改为 $.getJSON("test.json");</p>
                         </div>
                     </article>
 
@@ -96,17 +82,17 @@
                     <ul class="pagination pagination-sm">
                         <!--<li><a href="#">首页</a></li>-->
                         <li>
-                            <a href="#" aria-label="Previous">
+                            <a href="blog01-01.html" aria-label="Previous">
                                 <span aria-hidden="true">上一页</span>
                             </a>
                         </li>
-                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="blog01.html">1</a></li>
                         <li><a href="blog01-01.html">2</a></li>
-                        <li><a href="blog01-02.html">3</a></li>
+                        <li class="active"><a href="#">3</a></li>
                         <li><a href="#">4</a></li>
                         <li><a href="#">5</a></li>
                         <li>
-                            <a href="blog01-01.html" aria-label="Next">
+                            <a href="#" aria-label="Next">
                                 <span aria-hidden="true">下一页</span>
                             </a>
                         </li>
