@@ -57,120 +57,104 @@
                 <div class="article-list">                                   <!--文章列表-->
                     <article class="excerpt excerpt-first">                 <!--article H5新标签  blog中文本-->
                         <div class="page-header" style="text-align: center">
-                            <h1>CSS3新功能总结<small>Page2</small></h1><br/>
+                            <h1>CSS3新功能总结<small>Page3</small></h1><br/>
                             <p>关键词：CSS &nbsp; CSS3 &nbsp;HTML </p>
                         </div>
                         <div class="section1" style="font-size: 16px">
-                            <h2>CSS3选择器详解</h2><br/>
-                            <h3>1.属性选择器</h3><br/>
-                            <p>在CSS3中，追加了三个属性选择器，分别为：<span class="label label-info">[attr*=val]、[attr^=val]、[attr$=val]</span>使其有通配符概念</p>
+                            <h2>CSS3中的新增样式</h2><br/>
+                            <h3>1.CSS3文字和字体样式</h3><br/>
                             <div class="alert alert-success" role="alert">
-                                <p>attr表示属性名，如id,class等，val表示属性值<br/>[attr*=val]：属性中包含val字符<br/>[attr^=val]：属性中首字符包含val<br/>[attr$=val]：属性中结束字符包含val</p>
+                                 <h4>给文字添加阴影<span class="label label-info">text-shadow:(length,length,length,color)</span><br/><br/>
+                                      ->三个length分别表示(x轴偏移，y轴偏移，阴影模糊程度，颜色)</h4>
                             </div>
-                            <p>新建一个<span class="label label-default">css3 1.html</span></p>
-                            <img src="jpg/css24.png" style="width:300px;">
-                            <p>运行效果如下：</p>
-                            <img src="jpg/css25.png"><br/><br/>
-                            <hr/>
+                            <div class="alert alert-success" role="alert">
+                                <h4>修改字体种类，保持字体尺寸不变<span class="label label-info">font-size-adjust:数值</span><br/><br/>
+                                    ->数值=(x-height)/font-size</h4>
+                            </div>
 
-                            <h3>2.结构性伪类选择器——伪元素选择器</h3><br/>
-                            <p>结构性伪类选择器由伪类选择器、伪元素选择器和结构性伪类选择器组成，这里讲的是伪元素选择器</p>
+                            <h3>2.CSS3盒子相关样式</h3><br/>
                             <div class="alert alert-success" role="alert">
-                                <p>四个伪元素选择器：first-line、first-letter、before、after<br/>first-line：改变指定元素中第一行样式<br/>
-                                    first-letter：改变指定元素中第一个字样式<br/>before：在某个元素之前插入内容<br/>after：在某个元素后面插入内容</p>
+                                <h4>盒子类型<span class="label label-info">display:inline-block</span><br/><br/>
+                                    ->具有inline的特性，行内显示，又有block特性，可设置宽度</h4>
                             </div>
-                            <p>新建一个<span class="label label-default">css3 2.html</span></p>
-                            <img src="jpg/css26.png" style="width:300px;">
-                            <p>运行效果如下：</p>
-                            <img src="jpg/css27.png"><br/><br/>
-                            <hr/>
+                            <div class="alert alert-success" role="alert">
+                                <h4>对盒子中容纳不下的内容显示<span class="label label-info">overflow:hidden、overflow:scroll、前两者结合x,y使用</span><br/><br/>
+                                    ->overflow:hidden 超出盒子的内容隐藏<br/>->overflow:scroll 超出盒子的内容滑动显示<br/>
+                                    ->overflow-x:scroll;overflow-y:hidden 在x轴水平滑动</h4>
+                            </div>
+                            <div class="alert alert-success" role="alert">
+                                <h4>对盒子使用阴影<span class="label label-info">box-shadow:(length,length,length,color)</span><br/><br/>
+                                    ->三个length分别表示(x轴偏移，y轴偏移，阴影模糊程度，颜色)</h4>
+                            </div>
 
-                            <h3>3.结构性伪类选择器——结构性伪类选择器</h3><br/>
-                            <p>在CSS3中，结构性伪类选择器的特征是允许开发者根据文档的结构来指定元素的样式</p>
+                            <h3>3.背景与边框相关样式</h3><br/>
                             <div class="alert alert-success" role="alert">
-                                <p><strong>PartI：四个最基本的：root、not、empty、target</strong><br/>root：将样式绑在页面根元素中，即页面的html部分中<br/>
-                                    not：对某元素添加样式，并使里面某个子元素不使用该样式<br/>empty：当前元素内容为空白时使用的样式
-                                    <br/>target：该样式只当用户点击页面中超链接并跳转到target元素后起作用</p>
+                                <h4>背景新增属性：<br/><br/>
+                                    <span class="label label-info">background-clip:border-box</span>：背景包含所有区域，包括border<br/><br/>
+                                    <span class="label label-info">background-clip:padding-box</span>：背景包含padding，不包含border<br/><br/>
+                                    <span class="label label-info">background-clip:content-box</span>：背景包含内容content，不包padding
+                                </h4>
                             </div>
-                            <p>新建一个<span class="label label-default">css3 3.html</span></p>
-                            <img src="jpg/css28.png" style="width:300px;"><br/>
-                            <img src="jpg/css29.png" style="width:300px;">
-                            <p>运行效果如下：</p>
-                            <img src="jpg/css30.png"><br/><br/>
-
-                            <div class="alert alert-success" role="alert">
-                                <p><strong>PartII：first-child、last-child、nth-child、nth-last-child、nth-child(odd)、nth-child(even)、nth-last-child(odd)、nth-last-child(even)</strong>
-                                    <br/>first-child：对一个父元素的第一个子元素指定样式<br/>
-                                    last-child：对最后一个子元素指定样式<br/>nth-child：对指定序号子元素设置样式
-                                    <br/>nth-last-child：倒序，同上<br/>nth-child(odd)：第奇数个子元素，odd改为even表示偶数个</p>
-                            </div>
-                            <p>新建一个<span class="label label-default">css-1.html</span></p>
-                            <img src="jpg/css31.png" style="width:300px;"><br/>
-                            <p>运行效果如下：</p>
-                            <img src="jpg/css32.png"><br/><br/>
+                            <p>新建一个<span class="label label-default">bg1.html</span></p>
+                            <img src="jpg/css301.png" style="width: 300px"><br/><br/>
+                            <p>效果如下：</p>
+                            <img src="jpg/css302.png">
+                            <p>注： <span class="label label-info">background-origin</span>属性可以控制绘制的图片的位置，和clip用法类似</p><hr/>
 
                             <div class="alert alert-success" role="alert">
-                                <p><strong>PartIII：nth-of-type、nth-last-of-type</strong><br/>nth-of-type：计算第奇偶个子元素时，只针对同类型元素计算<br/>
-                                    nth-last-of-type：倒序，同上<br/></p>
+                                <h4>一个元素中显示多个背景图像：<br/><br/>
+                                    <span class="label label-info">background-image:url(图1),url(图2)</span>：背景引入两张图片<br/><br/>
+                                    <span class="label label-info">background-repeat:repeat-x,no-repeat</span>：分别对应上面两个图片<br/><br/>
+                                    <span class="label label-info">background-position:位置</span>
+                                </h4>
                             </div>
-                            <p>新建一个<span class="label label-default">css-2.html</span></p>
-                            <img src="jpg/css33.png" style="width:300px;"><br/>
-                            <p>运行效果如下：</p>
-                            <img src="jpg/css34.png"><br/><br/>
+                            <p>新建一个<span class="label label-default">bg2.html</span></p>
+                            <img src="jpg/css303.png" style="width: 300px"><br/><br/>
+                            <p>效果如下：</p>
+                            <img src="jpg/css304.png"><hr/>
 
                             <div class="alert alert-success" role="alert">
-                                <p><strong>PartIV：循环使用样式</strong><br/>nth-child(n)：
-                                    格式：n:an+b，a表示每组个数,b表示该元素在组内序号<br/>
-                                   </p>
-                            </div>
-                            <p>新建一个<span class="label label-default">css-3.html</span></p>
-                            <img src="jpg/css35.png" style="width:300px;"><br/>
-                            <p>运行效果如下：</p>
-                            <img src="jpg/css36.png"><br/><br/>
+                                <h4>圆角边框的绘制：<br/><br/>
+                                    <span class="label label-info">border-radius:a,b,c,d</span>：a,b,c,d分别对应四个圆角度数<br/><br/>
+                                </h4>
+                            </div><hr/>
+                            <div class="alert alert-success" role="alert">
+                                <h4>使用图像边框：<br/><br/>
+                                    <span class="label label-info">border-image:url(图片) a,b,c,d</span>：a,b,c,d分别对应九宫格中内容与上右下左四边的距离
+                                    <br/><br/><small>（了解九宫格有关知识，明确中部内容格不变，图像边框随着上面参数变化）</small><br/><br/>
+                                </h4>
+                            </div><hr/>
 
+                            <h3>4.动画功能（对Page1中转换与动画的补充）</h3><br/>
+                            <div class="alert alert-success" role="alert">
+                                <h4>transition功能：<br/><br/>
+                                    格式：<span class="label label-info">transition:progerty duration timing-function</span><br/><br/>
+                                    如：<p>transition:background-color 1s linear<br/><br/>(transition可并列多个属性,参考Page1)
+                                </h4>
+                            </div>
 
                             <div class="alert alert-success" role="alert">
-                                <p><strong>PartV：only-child</strong><br/>only-child：给只有一个列表项的元素设置样式，此时可用only-child代替nth-child</p>
+                                <h4>animation功能：<br/><br/>
+                                    <p>可定义关键帧，及关键帧中的元素属性值。实现比transition更复杂的动画效果。</p>
+                                   <p>可参考Page1中的动画模块，<small>补充：可通过增加hover事件调用anim方法。可实现多个属性值在一个帧中改变，
+                                   可加入2D转换方法。</small></p>
+                                </h4>
                             </div>
-                            <p>新建一个<span class="label label-default">css-4.html</span></p>
-                            <img src="jpg/css37.png" style="width:300px;"><br/>
-                            <p>运行效果如下：</p>
-                            <img src="jpg/css38.png"><br/><br/>
-                            <hr/>
 
-
-                            <h3>4.UI元素状态伪类选择器</h3><br/>
-                            <p>指定的样式只有当元素处于某种状态下时才起作用，默认状态下不起作用。此处介绍<span class="label label-info">E：hover</span>、
-                                <span class="label label-info">E：focus</span>、<span class="label label-info">E：active</span>、<span class="label label-info">E：enabled</span>、
-                                <span class="label label-info">E：disabled</span>、
-                                <span class="label label-info">E：checked</span><br/>
                             <div class="alert alert-success" role="alert">
-                                <p><span class="label label-info">E：hover</span>：鼠标经过时</p>
-                                <p><span class="label label-info">E：focus</span>：获取焦点时</p>
-                                <p><span class="label label-info">E：active</span>：鼠标按住不放时</p>
-                                <p><span class="label label-info">E：checked</span>：勾选时</p>
-                            <p><span class="label label-info">E：enabled</span>：设置可用状态的样式</p>
-                            <p><span class="label label-info">E：disabled</span>：不可用状态</p>
-
+                                <h4>实现动画的方法：<br/><br/>
+                                    <p>过渡效果时间曲线timing-function包括：linear、ease-in、ease-out、ease</p>
+                                    <p>linear:全程匀速</p>
+                                    <p>ease-in:由慢到快</p>
+                                    <p>ease-out:由快到慢</p>
+                                    <p>ease:慢-快-慢</p>
+                                </h4>
                             </div>
-                            </p>
-                            <p>新建一个<span class="label label-default">css1-1.html</span>和<span class="label label-default">css1-2.html</span></p>
-                            <img src="jpg/css39.png" style="width:300px;"><br/>
-                            <img src="jpg/css40.png" style="width:300px;"><br/>
-                            <p>图二运行效果如下：</p>
-                            <img src="jpg/css40-1.png"><br/><br/>
 
-                            <p>新建一个<span class="label label-default">css1-3.html</span>测试enabled和disabled</p>
-                            <img src="jpg/css41.png" style="width:300px;"><br/>
-                            <p>运行效果如下：</p>
-                            <img src="jpg/css42.png"><br/><br/>
-                            <hr/>
 
-                            <h3>5.通用兄弟元素伪类选择器</h3><br/>
-                            <p>新建一个<span class="label label-default">css-4.html</span></p>
-                            <img src="jpg/css43.png" style="width:300px;"><br/>
-                            <p>运行效果如下：</p>
-                            <img src="jpg/css44.png"><br/><br/>
+
+
+
                         </div>
                     </article>
 
@@ -179,17 +163,17 @@
                     <ul class="pagination pagination-sm">
                         <!--<li><a href="#">首页</a></li>-->
                         <li>
-                            <a href="CSS3-01.html" aria-label="Previous">
+                            <a href="CSS3-02.html" aria-label="Previous">
                                 <span aria-hidden="true">上一页</span>
                             </a>
                         </li>
                         <li><a href="CSS3-01.html">1</a></li>
-                        <li class="active"><a href="#">2</a></li>
-                        <li><a href="CSS3-03.html">3</a></li>
+                        <li><a href="CSS3-02.html">2</a></li>
+                        <li class="active"><a href="#">3</a></li>
                         <li><a href="#">4</a></li>
                         <li><a href="#">5</a></li>
                         <li>
-                            <a href="CSS3-03.html" aria-label="Next">
+                            <a href="#" aria-label="Next">
                                 <span aria-hidden="true">下一页</span>
                             </a>
                         </li>
