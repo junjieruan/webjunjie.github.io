@@ -110,11 +110,21 @@ nav .logo  a{
 }
 
 nav .logo  h1{
-    font-size: 200%;
+    font-size: 25px;
+    line-height: 50px;
     /*transform-style: preserve-3d;*/
     /*animation: run  ease-in-out 9s infinite;*/
-    /*text-align: center;*/
+    text-shadow: 10px,10px,10px,red;
     color: #fff;
+    transition:font-size 2s,transform 2s,color 2s;
+}
+
+nav .logo  h1:hover{
+   font-size: 30px;
+    color: #08d7a2;
+    text-shadow:1px 1px 7px white;
+    transform:rotate(360deg);
+    margin-bottom: 10px;
 }
 
 nav ul li:hover span {
@@ -178,7 +188,52 @@ nav ul li:hover a {
     width: 100%;
     height: 250px;
     background-color: #333;
+    position: relative;
 }
+
+.MyTabcolor1 .message img{
+    z-index:10000;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 30px 50px;
+    box-shadow: -5px 0px 10px grey;
+}
+
+.MyTabcolor1 .message h3{
+    color: #08d7a2;
+    font-family: "微软雅黑";
+    text-shadow: 5px 5px 17px #cccccc;
+}
+.MyTabcolor1 .message h3 ~ ul li{
+    list-style: none;
+    margin-top: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.MyTabcolor1 .message .me{
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    border: 5px solid #08d7a2 ;
+    border-radius: 10px;
+    padding:0px 10px;
+    box-shadow: 5px 5px 5px #08d7a2;
+}
+
+.MyTabcolor1 .message{
+    animation: anim 2s;
+}
+
+@keyframes anim {
+    0%{opacity: 1;transform: skew(0deg)}
+    50%{opacity: 0.5;transform: skew(-10deg)}
+    100%{opacity: 1;transform: skew(0deg)}
+}
+
+
 
 .MyTabcolor2{
     width: 100%;
