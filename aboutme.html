@@ -174,33 +174,28 @@
                     <article class="excerpt excerpt-first">                 <!--article H5新标签  blog中文本-->
                         <header>
                             <a class="cat" href="#">
-                                软件工程
+                                JavaScript笔记
                                 <i></i>
                             </a>
                             <h2>
-                                <a class="" href="#" title="总结软件架构特征">
-                                    总结软件架构特征</a>
+                                <a class="" href="#" title="JavaScript学习笔记之数组的深拷贝 ">
+                                    JavaScript学习笔记之数组的深拷贝 </a>
                             </h2>
                         </header>
                         <p class="meta">
-                            <span class="glyphicon glyphicon-time iconcolor"></span>2016/6/27   <!--引用小图标 span中不能有文本-->
+                            <span class="glyphicon glyphicon-time iconcolor"></span>2016/7/7   <!--引用小图标 span中不能有文本-->
                             <span class="glyphicon glyphicon-eye-open iconcolor"></span>浏览(<a href="#">11</a>)
                             <span class="glyphicon glyphicon-comment iconcolor"></span>评论(<a href="#">0</a>)
                             <span class="glyphicon glyphicon-heart-empty heartcolor" style="color: palevioletred"></span>(<a href="#">2</a>)
                         </p>
                         <p class="text">
-                            软件基本模型=实体(语言) + 连接和交互1.概念：软件架构设计的一个核心问题是能否使用重复的架构模
-                            式，即能否达到架构级的软件重用。也就是说，能否在不同的软件系绕中使用同一架构。软件架构风格是
-                            描述某一特定应用领域中系统组织方式的惯用模式(idiomatic paradigm).架构风格定义了一个系统家族
-                            ，即一个架构定义一个词汇表和一组约束。词汇表中包含一些构件和连接件类型，而这组约束指出系统是
-                            如何将这些构件和连接 件组合起来的。架构风格反映了领域中众多系统所共有的结构和语义特性，并指导
-                            如何将各个模块和子系统有效地组织成一个完整的系统。按这种方式理解，软件架 构风格定义了用于描述
-                            系统的术语表和一组指导构件系统的规则。 通用架构风格的分类如.......
+                            由于JavaScript的数据分为‘原始类型’和‘引用类型’，数组Array是引用类型，与c语言类似，对数组
+                            直接用‘=’号赋值的话，赋给变量的值只是该数组的引用地址（c语言中叫指针），并没有实现数组数据
+                            的拷贝，两个数组共享同一组数据，也就是说一旦修改这两个数组中的任何一方，该修改也会在另一方体现出来。
                         </p>
                         <p class="label">
-                            <span class="label label-default">#软件架构</span>     <!--引用标签-->
-                            <span class="label label-default">#架构风格</span>
-                            <a href="#" class=" pull-right">继续阅读 »</a>
+                            <span class="label label-default">#JavaScript</span>     <!--引用标签-->
+                            <a href="JavaScript1.html" class=" pull-right">继续阅读 »</a>
                         </p>
                     </article>
                     <article class="excerpt excerpt-first">                 <!--article H5新标签  blog中文本-->
@@ -264,23 +259,8 @@
                 <div class="page">                                              <!--分页条-->
                     <ul class="pagination pagination-sm">
                         <!--<li><a href="#">首页</a></li>-->
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">上一页</span>
-                            </a>
-                        </li>
                         <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">下一页</span>
-                            </a>
-                        </li>
-                        <li><a href="#">末页</a></li>
-                        <li><span class="totalpage">共-4-页</span></li>
+                        <li><span class="totalpage">共-1-页</span></li>
                     </ul>
                  </div>
              </div>
